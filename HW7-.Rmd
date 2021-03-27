@@ -1,0 +1,97 @@
+---
+title: "HW7"
+author: "Humayun Qasemi"
+date: "3/27/2021"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r packages}
+library(rvest)
+library(dplyr)
+library(tidyverse)
+library(repurrrsive)
+library(jsonlite)
+library(purrr)
+library(listviewer)
+listviewer::jsonedit(gh_users)
+webshot::install_phantomjs()
+library(tinytex)
+```
+```{r Q1}
+###Titles
+
+Link <- "https://www.imdb.com/list/ls091520106/"
+page = read_html(Link)
+Titles = page%>% html_nodes(".lister-item-header a")%>%
+html_text()
+Titles
+
+###Ratings
+
+Link <- "https://www.imdb.com/list/ls091520106/"
+page = read_html(Link)
+Ratings = page%>% html_nodes(".ipl-rating-star.small .ipl-rating-star__rating")%>%
+html_text()
+Ratings
+
+###RunTime
+
+Link <- "https://www.imdb.com/list/ls091520106/"
+page = read_html(Link)
+Runtime = page%>% html_nodes(".runtime")%>%
+html_text()
+Runtime
+Runtime <- parse_number(Runtime)
+Runtime
+
+MoviesDataFrame = data.frame(Titles,Ratings, Runtime)
+as_tibble(MoviesDataFrame)
+MoviesDataFrame
+
+```
+```{r Q2}
+
+
+### Q2-A) A nested list is simply a list that occurs as an element of another list (which may of course itself be an element of another list, etc.).
+
+###Q2-B) 
+
+gh_repos
+
+### the code shows a nested list of items with its own characteristics. Its a nested list of names that is unorganized and unrecognizable to the unskilled eyes. It needs to be in tibble and tidied in order for us to get any information out of it.
+
+### 2c) 
+
+repos <- tibble(repo = gh_repos)
+
+repos
+
+### Each user is a named list, where each element represents a column: To begin, we put the gh_repos list into a data frame: The code above puts the list into a tibble data frame
+
+
+###2d
+
+### the listviewer shows the nested data in depth and gives more detail regarding each dataset or datalist. It shows the list of data for each github repo. A list can contain any sort object, even another list (sublist), which in turn can contain sublists themselves, and so on. This is known as nested list. You can use them to arrange data into hierarchical structures.the numbers 30 and 68 represents the components/charactersistics of each list. the listviewer will give us the details regarding those components of the list.
+
+listviewer::jsonedit(gh_repos)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

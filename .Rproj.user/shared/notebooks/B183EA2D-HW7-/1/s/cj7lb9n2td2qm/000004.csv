@@ -1,0 +1,5 @@
+"0","webshot::install_phantomjs()"
+"2","It seems that the version of `phantomjs` installed is greater than or equal to the requested version.To install the requested version or downgrade to another version, use `force = TRUE`.
+"
+"0","library(tinytex)"
+"2","package ‘tinytex’ was built under R version 3.6.3"

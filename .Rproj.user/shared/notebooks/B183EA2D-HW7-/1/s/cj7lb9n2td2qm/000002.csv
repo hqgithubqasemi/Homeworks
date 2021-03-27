@@ -1,0 +1,64 @@
+"0","library(rvest)"
+"2","package ‘rvest’ was built under R version 3.6.3"
+"0","library(dplyr)"
+"2","package ‘dplyr’ was built under R version 3.6.3"
+"2","
+Attaching package: ‘dplyr’
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(tidyverse)"
+"2","package ‘tidyverse’ was built under R version 3.6.3"
+"2","Registered S3 methods overwritten by 'dbplyr':
+  method         from
+  print.tbl_lazy     
+  print.tbl_sql      
+"
+"2","[37m-- [1mAttaching packages[22m ----------------------- tidyverse 1.3.0 --[39m
+"
+"2","[37m[32mv[37m [34mggplot2[37m 3.3.3     [32mv[37m [34mpurrr  [37m 0.3.4
+[32mv[37m [34mtibble [37m 3.1.0     [32mv[37m [34mstringr[37m 1.4.0
+[32mv[37m [34mtidyr  [37m 1.1.3     [32mv[37m [34mforcats[37m 0.5.1
+[32mv[37m [34mreadr  [37m 1.4.0     [39m
+"
+"2","package ‘ggplot2’ was built under R version 3.6.3"
+"2","package ‘tibble’ was built under R version 3.6.3"
+"2","package ‘tidyr’ was built under R version 3.6.3"
+"2","package ‘readr’ was built under R version 3.6.3"
+"2","package ‘purrr’ was built under R version 3.6.3"
+"2","package ‘forcats’ was built under R version 3.6.3"
+"2","[37m-- [1mConflicts[22m -------------------------- tidyverse_conflicts() --
+[31mx[37m [34mdplyr[37m::[32mfilter()[37m         masks [34mstats[37m::filter()
+[31mx[37m [34mreadr[37m::[32mguess_encoding()[37m masks [34mrvest[37m::guess_encoding()
+[31mx[37m [34mdplyr[37m::[32mlag()[37m            masks [34mstats[37m::lag()[39m
+"
+"0","library(repurrrsive)"
+"2","package ‘repurrrsive’ was built under R version 3.6.3"
+"0","library(jsonlite)"
+"2","package ‘jsonlite’ was built under R version 3.6.3"
+"2","
+Attaching package: ‘jsonlite’
+
+"
+"2","The following object is masked from ‘package:purrr’:
+
+    flatten
+
+"
+"0","library(purrr)"
+"0","library(listviewer)"
+"2","package ‘listviewer’ was built under R version 3.6.3"
+"2","Registered S3 method overwritten by 'htmlwidgets':
+  method           from         
+  print.htmlwidget tools:rstudio
+"
+"0","listviewer::jsonedit(gh_users)"
